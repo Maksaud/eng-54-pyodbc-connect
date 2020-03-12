@@ -22,4 +22,4 @@ This class will be about joining our python with sql.
 git clone https://github.com/Maksaud/eng-54-pyodbc-connect
 
 # run
-python3 .py
+python3 run_file.py
