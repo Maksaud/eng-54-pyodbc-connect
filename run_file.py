@@ -11,7 +11,7 @@ def one_or_all(add_method):
         record = data.fetchone()
         if record is None:
             break
-        print(record.ProductName)
+        print(record)
 
 while True:
     print('select 1 for all products\n Select 2 for one product\n Select 3 to create a product\n Select 4 to create a product')

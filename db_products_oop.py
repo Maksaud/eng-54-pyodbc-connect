@@ -21,6 +21,11 @@ class NWProducts(MSDBConnection):
         rows = self.__sql_query(f"SELECT * FROM {self.table} WHERE ProductName = '{product_input}'")
         return rows
 
+        # hamdle your errors and failures
+            # it could fail to find and ID and I want:
+            # code not to break
+            # let my user know that it failed
+
     # READ ALL PRUDUCTS (Select)
     def all(self):
         # return data with all products
@@ -41,3 +46,4 @@ class NWProducts(MSDBConnection):
         rows = self.__sql_query(f"DELETE FROM {self.table} WHERE ProductName = '{delete}'")
         self.conn.commit()
         return rows
+
