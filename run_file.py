@@ -14,7 +14,7 @@ def one_or_all(add_method):
         print(record.ProductName)
 
 while True:
-    print('select 1 for all products\n Select 2 for one product\n Select 3 to create a product')
+    print('select 1 for all products\n Select 2 for one product\n Select 3 to create a product\n Select 4 to create a product')
     user_input = input('>>> ')
     if user_input == '1':
         # get all our product using our new method
