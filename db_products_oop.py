@@ -17,8 +17,8 @@ class NWProducts(MSDBConnection):
 
     #R - READ ONE product :) (Select)
     def one_product(self):
-        id_input = int(input("Eneter The Id "))
-        rows = self.__sql_query(f'SELECT * FROM {self.table} WHERE ProductID = {id_input}')
+        product_input = input("Eneter The productName ")
+        rows = self.__sql_query(f"SELECT * FROM {self.table} WHERE ProductName = '{product_input}'")
         return rows
 
     # READ ALL PRUDUCTS (Select)
@@ -32,12 +32,12 @@ class NWProducts(MSDBConnection):
     def create(self):
         product_input = input("What product you want to input ")
         rows = self.__sql_query(f"INSERT INTO {self.table} (ProductName) VALUES ('{product_input}')")
-        MSDBConnection.conn.commit()
+        self.conn.commit()
         return rows
 
     # Delete (delete)
     def delete(self):
         delete = input("What Product Name do you want to delete ")
-        rows = self.__sql_query(f"DELETE FROM {self.table} WHERE ProductName = {delete}")
-        MSDBConnection.conn.commit()
+        rows = self.__sql_query(f"DELETE FROM {self.table} WHERE ProductName = '{delete}'")
+        self.conn.commit()
         return rows

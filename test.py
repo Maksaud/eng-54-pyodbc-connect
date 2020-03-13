@@ -10,6 +10,7 @@ except ValueError as err:
     print("Check if the method is a valid method")
     print(err)
 
+
 try:
     all_products = products_tb.all()
     print(all_products.fetchone())
@@ -18,5 +19,6 @@ except ValueError as err:
     print(err)
 
 create_products = products_tb.create()
+
 
 delete_products = products_tb.delete()

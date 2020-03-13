@@ -21,10 +21,7 @@ while True:
         # Iterate and display nicely
         one_or_all(products_tb.all())
     elif user_input == '2':
-        data = products_tb.one_product()
-        print(data)
-        while True:
-            one_or_all(products_tb.one_product())
+        one_or_all(products_tb.one_product())
     elif user_input == '3':
         data = products_tb.create()
     elif user_input == '4':
